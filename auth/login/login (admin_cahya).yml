@@ -1,0 +1,25 @@
+info:
+  name: login (admin_cahya)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8000/api/login
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: cahyailham
+      - name: password
+        type: text
+        value: admin123
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

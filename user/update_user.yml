@@ -1,0 +1,65 @@
+info:
+  name: update_user
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8000/api/users/3
+  body:
+    type: multipart-form
+    data:
+      - name: _method
+        type: text
+        value: PUT
+      - name: nama_lengkap
+        type: text
+        value: Cahya Ilham
+      - name: nickname
+        type: text
+        value: Ilham
+      - name: foto_profil
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\WhatsApp Image 2025-11-24 at 10.16.44.jpg
+        contentType: image/jpeg
+      - name: hobi[0]
+        type: text
+        value: Coding
+      - name: hobi[1]
+        type: text
+        value: Gaming
+      - name: pendidikan[0][jenjang]
+        type: text
+        value: D4
+      - name: pendidikan[0][institusi]
+        type: text
+        value: IPB University
+      - name: pengalaman[0][posisi]
+        type: text
+        value: Backend Developer
+      - name: pengalaman[0][perusahaan]
+        type: text
+        value: Rajasa
+      - name: social_media[0][id]
+        type: text
+        value: "1"
+      - name: social_media[0][platform]
+        type: text
+        value: Instagram
+      - name: social_media[0][username]
+        type: text
+        value: cahya ilham
+      - name: social_media[0][url]
+        type: text
+        value: https://www.instagram.com/chyilhm/
+  auth:
+    type: bearer
+    token: 5|zBw1Ulk17eoQrMxHVo4S57uJUAugHnULjTGSd8uv605a8f7b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

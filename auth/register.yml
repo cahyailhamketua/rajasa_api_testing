@@ -1,0 +1,42 @@
+info:
+  name: register
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8000/api/register
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: reinadamutiara
+      - name: password
+        type: text
+        value: admin123
+      - name: password_confirmation
+        type: text
+        value: admin123
+      - name: nama_lengkap
+        type: text
+        value: Reinada Mutiara
+      - name: email
+        type: text
+        value: reinadamutiara@gmail.com
+      - name: nickname
+        type: text
+        value: Nada
+      - name: role
+        type: text
+        value: admin
+  auth:
+    type: bearer
+    token: 2|1Zbf03wukIwR2O6wLA7RobI4OCV0O9aaGYngnsZb477d502c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

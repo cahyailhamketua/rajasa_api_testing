@@ -1,0 +1,21 @@
+info:
+  name: delete_user
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:8000/api/users/2
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: 2|HKJDLGaqFNwizOtAk8nqwQ3rwMRB3P4NnZmYks4Nfbbb27eb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

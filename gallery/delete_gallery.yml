@@ -1,0 +1,18 @@
+info:
+  name: delete_gallery
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:8000/api/galleries/2
+  auth:
+    type: bearer
+    token: 9|dqsyiOZjoXP07JH6wliIk5OspdyzBE7NK25jqAX63a8e2ce1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

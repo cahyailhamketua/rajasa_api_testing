@@ -1,0 +1,54 @@
+info:
+  name: create_gallery
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8000/api/galleries
+  body:
+    type: multipart-form
+    data:
+      - name: judul
+        type: text
+        value: rajasa nongkrong
+      - name: deskripsi
+        type: text
+        value: lorem ipsum dolor sit amet
+      - name: nama_lokasi
+        type: text
+        value: Sukabumi
+      - name: latitude
+        type: text
+        value: "-6.92141"
+      - name: longitude
+        type: text
+        value: "106.92572"
+      - name: tanggal_kegiatan
+        type: text
+        value: 2026-09-20
+      - name: images[0]
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\1742021981879.jpg
+        contentType: image/jpeg
+      - name: images[1]
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\Salinan dari Thumbnail Website Project.png
+        contentType: image/png
+      - name: images[2]
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\Thumbnail Website Project.png
+        contentType: image/png
+  auth:
+    type: bearer
+    token: 9|dqsyiOZjoXP07JH6wliIk5OspdyzBE7NK25jqAX63a8e2ce1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

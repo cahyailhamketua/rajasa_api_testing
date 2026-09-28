@@ -1,7 +1,7 @@
 info:
   name: create_gallery
   type: http
-  seq: 3
+  seq: 4
 
 http:
   method: POST
@@ -44,7 +44,7 @@ http:
         contentType: image/png
   auth:
     type: bearer
-    token: 9|dqsyiOZjoXP07JH6wliIk5OspdyzBE7NK25jqAX63a8e2ce1
+    token: 10|G8l52ovZxvGa65YZR3ZBF83MwzS91B6JhVxEBHlm20bc1807
 
 settings:
   encodeUrl: true

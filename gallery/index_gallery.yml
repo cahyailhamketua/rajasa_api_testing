@@ -5,7 +5,15 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8000/api/galleries
+  url: http://localhost:8000/api/galleries?user_id=3
+  params:
+    - name: user_id
+      value: "3"
+      type: query
+    - name: tahun
+      value: "2026"
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

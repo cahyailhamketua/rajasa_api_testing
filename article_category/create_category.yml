@@ -1,0 +1,24 @@
+info:
+  name: create_category
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8000/api/article-categories
+  body:
+    type: multipart-form
+    data:
+      - name: nama
+        type: text
+        value: Teknologi
+  auth:
+    type: bearer
+    token: 16|PZYj8DmbFZlH4IxDNyUotcbph0Qj0G6sBvCDCCOB04c341cd
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

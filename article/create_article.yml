@@ -1,0 +1,35 @@
+info:
+  name: create_article
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8000/api/articles
+  body:
+    type: multipart-form
+    data:
+      - name: category_id
+        type: text
+        value: "2"
+      - name: judul
+        type: text
+        value: Kegiatan Rajasa Tahun 2026
+      - name: isi_artikel
+        type: text
+        value: Rajasa kembali melaksanakan berbagai kegiatan bersama anggota pada tahun 2026.
+      - name: gambar_cover
+        type: file
+        value:
+          - C:\Users\ilmun\Downloads\D’REAMS (1).png
+        contentType: image/png
+  auth:
+    type: bearer
+    token: 15|2M2xbZBLyVFeOJnBv2HkPv3jPkXhYlNMjoLdmoa0cfedf22b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

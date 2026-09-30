@@ -1,0 +1,27 @@
+info:
+  name: update_category
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8000/api/article-categories/2
+  body:
+    type: multipart-form
+    data:
+      - name: nama
+        type: text
+        value: Teknologies
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 16|PZYj8DmbFZlH4IxDNyUotcbph0Qj0G6sBvCDCCOB04c341cd
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

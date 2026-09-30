@@ -1,0 +1,33 @@
+info:
+  name: update_contact
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8000/api/company-contacts/2
+  body:
+    type: multipart-form
+    data:
+      - name: platform
+        type: text
+        value: test
+      - name: username
+        type: text
+        value: test
+      - name: url
+        type: text
+        value: https://www.instagram.com/kelbes.rajasa/
+      - name: _method
+        type: text
+        value: PUT
+  auth:
+    type: bearer
+    token: 2|QWA8nwBZirYYTnSvdnl8VYWUVbthhh8OIIVqLCZkd21bbbeb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

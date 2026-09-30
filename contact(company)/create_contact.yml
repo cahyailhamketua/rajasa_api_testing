@@ -1,0 +1,30 @@
+info:
+  name: create_contact
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8000/api/company-contacts
+  body:
+    type: multipart-form
+    data:
+      - name: platform
+        type: text
+        value: Instagram
+      - name: username
+        type: text
+        value: kelbes.rajasa
+      - name: url
+        type: text
+        value: https://www.instagram.com/kelbes.rajasa/
+  auth:
+    type: bearer
+    token: 2|QWA8nwBZirYYTnSvdnl8VYWUVbthhh8OIIVqLCZkd21bbbeb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

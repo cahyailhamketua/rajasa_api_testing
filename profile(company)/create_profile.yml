@@ -1,0 +1,45 @@
+info:
+  name: create_profile
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8000/api/company-profiles
+  body:
+    type: multipart-form
+    data:
+      - name: nama
+        type: text
+        value: Instagram
+      - name: tagline
+        type: text
+        value: kelbes.rajasa
+      - name: deskripsi
+        type: text
+        value: https://www.instagram.com/kelbes.rajasa/
+      - name: logo
+        type: text
+        value: ""
+      - name: foto_cover
+        type: text
+        value: ""
+      - name: email
+        type: text
+        value: ""
+      - name: nomor_telepon
+        type: text
+        value: ""
+      - name: alamat
+        type: text
+        value: ""
+  auth:
+    type: bearer
+    token: 2|QWA8nwBZirYYTnSvdnl8VYWUVbthhh8OIIVqLCZkd21bbbeb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

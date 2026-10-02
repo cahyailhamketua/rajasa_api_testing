@@ -1,7 +1,7 @@
 info:
-  name: article_category
+  name: profile(company)
   type: folder
-  seq: 6
+  seq: 7
 
 request:
   auth: inherit

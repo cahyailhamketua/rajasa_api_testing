@@ -1,0 +1,30 @@
+info:
+  name: delete_profile
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:8000/api/company-profiles/1
+  body:
+    type: multipart-form
+    data:
+      - name: platform
+        type: text
+        value: test
+      - name: username
+        type: text
+        value: test
+      - name: url
+        type: text
+        value: https://www.instagram.com/kelbes.rajasa/
+  auth:
+    type: bearer
+    token: 2|QWA8nwBZirYYTnSvdnl8VYWUVbthhh8OIIVqLCZkd21bbbeb
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
